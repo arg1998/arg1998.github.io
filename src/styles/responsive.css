@@ -7,7 +7,6 @@
 
 /* Mobile Devices */
 @media (max-width: 900px) {
-
   .post-tags {
     background: none !important;
     position: static !important;
@@ -59,6 +58,36 @@
     min-height: 40px !important;
   }
 
+  #reset-filters-mobile {
+    display: inline-block;
+    border-radius: var(--filter-item-radius);
+    background-color: var(--filter-bar-background-color);
+    color: var(--text-color-button-warning);
+    border: 1px solid var(--text-color-button-warning);
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: var(--default-font);
+    backdrop-filter: blur(var(--filter-bar-blur-size));
+    -webkit-backdrop-filter: blur(var(--filter-bar-blur-size));
+    margin-left: 15px;
+  }
+
+  #reset-filters-mobile:active {
+  background-color: color-mix(
+    in srgb,
+    var(--text-color-button-warning),
+    transparent 80%
+  );
+}
+
+
+  #reset-filters {
+    display: none;
+  }
+
   .flatpickr-calendar {
     top: 120px !important;
   }
@@ -76,7 +105,6 @@
     padding: 15px 10px 0px 0px;
   }
 
-
   .single-post-container {
     backdrop-filter: blur(var(--post-card-blur-size));
     -webkit-backdrop-filter: blur(var(--post-card-blur-size));
@@ -85,7 +113,6 @@
     padding-bottom: 15px;
     background-color: #1e1e1e8c;
     margin-bottom: 100px;
-
   }
 
   .single-post-title {
@@ -94,7 +121,7 @@
 
   .single-post-container::after {
     content: " ";
-    display: block; 
+    display: block;
   }
 
   .post-header {
@@ -102,33 +129,8 @@
   }
 
   .back-to-blog {
-    padding-left: 10px; 
+    padding-left: 10px;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   body,
   html {
@@ -136,7 +138,6 @@
     padding: 0;
     height: 100%;
   }
-
 
   .background-image {
     position: fixed;
@@ -178,15 +179,13 @@
     border: none;
   }
 
-
-
   #content-container {
     width: 100vw;
     position: relative;
     left: 0vw;
     transition: left 0.2s ease-out;
     margin: 0px;
-    padding: 0px; 
+    padding: 10px;
   }
 
   .show-sidebar {
@@ -196,7 +195,6 @@
   .hide-content {
     left: 100vw !important;
   }
-
 
   .menu-button {
     backdrop-filter: blur(var(--post-card-blur-size)) !important;
@@ -224,8 +222,6 @@
     font-size: 32px;
   }
 
-
-
   .sidebar {
     justify-content: flex-start;
     height: 100vh;
@@ -242,7 +238,6 @@
   .flag {
     margin-bottom: 0;
   }
-
 
   .navmenu ul li {
     max-height: 48;
@@ -266,5 +261,11 @@
     left: 50vw;
     transform: translate(-50%, 50%);
     z-index: 9999;
+  }
+
+  /* ------------------ Date picker ------------------ */
+
+  .rs-picker-popup {
+    top: 150px !important;
   }
 }
