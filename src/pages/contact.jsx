@@ -1,11 +1,11 @@
-import Layout from "../components/Layout";
+import Application from "../components/Application";
 
 const ContactMe = () => {
   return (
-    <Layout
+    <Application
       currentRoute={"/contact"}
       pageTitle={"ARGOSTA → Contact Me"}
-    ></Layout>
+    ></Application>
   );
 };
 

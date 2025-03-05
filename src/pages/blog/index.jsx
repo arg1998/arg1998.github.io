@@ -1,17 +1,18 @@
 import { useState } from "react";
 import Fuse, * as fuse from "fuse.js";
-import Layout from "../../components/Layout";
+import Application from "../../components/Application";
 import FilterBar from "../../components/FilterBar";
 import BlogRow from "../../components/BlogRow";
 import __post_data from "../../data/posts.json";
+import PostsTagSource from "../../data/postTags";
 
-const postData = Object.values(__post_data);
+const postData = Object.values(__post_data).filter((post) => post.active)
 
 const Blog = () => {
   const [filterQuery, setFilterQuery] = useState({});
+  const [sortPostsNewest, setSortPostsNewest] = useState(true);
 
   const onFilterbarQueryChanegd = (query) => {
-    console.log(query);
     setFilterQuery(query);
   };
 
@@ -46,14 +47,28 @@ const Blog = () => {
 
       _posts = result.map((val) => val.item);
     }
+
+
+    
+    
     return _posts;
   };
 
   let postDataFiltered = filterPostData();
 
+  if(sortPostsNewest){
+    postDataFiltered.sort((a, b) => b.date - a.date)
+  } else {
+    postDataFiltered.sort((a, b) => a.date - b.date);
+  }
+
+    
   return (
-    <Layout currentRoute={"/blog"} pageTitle={"ARGOSTA → Blog"}>
-      <FilterBar onFilterBarUpdate={onFilterbarQueryChanegd} />
+    <Application currentRoute={"/blog"} pageTitle={"ARGOSTA → Blog"}>
+      <FilterBar
+        onFilterBarUpdate={onFilterbarQueryChanegd}
+        TagSource={PostsTagSource}
+      />
 
       <div id="posts-container" className="blog-container">
         {postDataFiltered.map((single_post_data) => {
@@ -62,7 +77,7 @@ const Blog = () => {
           );
         })}
       </div>
-    </Layout>
+    </Application>
   );
 };
 

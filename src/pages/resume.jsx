@@ -1,8 +1,8 @@
-import Layout from "../components/Layout";
+import Application from "../components/Application";
 
 const Resume = () => {
   return (
-    <Layout currentRoute={"/resume"} pageTitle={"ARGOSTA → Resume"}></Layout>
+    <Application currentRoute={"/resume"} pageTitle={"ARGOSTA → Resume"}></Application>
   );
 };
 
