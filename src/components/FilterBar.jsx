@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { SelectPicker, DatePicker } from "rsuite";
-import TagsDatabase from "../data/tags";
 
-const FilterBar = ({ onFilterBarUpdate }) => {
+
+const FilterBar = ({ onFilterBarUpdate, TagSource }) => {
   const [selectedTag, setSelctedTag] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDate, setSelectedDate] = useState(null);
@@ -16,11 +16,11 @@ const FilterBar = ({ onFilterBarUpdate }) => {
     });
   }, [selectedDate, selectedTag, searchButtonToggle]);
 
-  const tags = Object.values(TagsDatabase);
+  const tags = Object.values(TagSource);
 
   const OnTagSelect = (value) => {
     const tag = value;
-    if (tag == TagsDatabase.all.value) {
+    if (tag == TagSource.all.value) {
       OnTagCleared();
     } else {
       setSelctedTag(tag);
@@ -32,7 +32,7 @@ const FilterBar = ({ onFilterBarUpdate }) => {
   };
 
   const onSearchButtonClick = () => {
-    setSearchButtonToggle((value) => !value)
+    setSearchButtonToggle((value) => !value);
   };
 
   const onSearchQueryChanged = (e) => {
@@ -51,7 +51,7 @@ const FilterBar = ({ onFilterBarUpdate }) => {
   };
   const OnDateCleared = () => {
     setSelectedDate(null);
-  }
+  };
 
   const currentDate = new Date();
   const minDate = new Date(2025, 0, 1); // January 1, 2025

@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { SvgIconCanadaFalg } from "../components/SvgIcons"
 
 const Sidebar = ({ currentRoute }) => {
   const pages = [
     { path: "/", label: "Home", icon: "bi-house" },
     { path: "/about", label: "About Me", icon: "bi-person" },
     { path: "/projects", label: "Projects", icon: "bi-braces" },
-    { path: "/blog", label: "Blog", icon: "bi-journal-text" },
+    { path: "/blog", label: "Blog", icon: "bi-pencil" },
     { path: "/resume", label: "Resume", icon: "bi-file-earmark-person" },
     { path: "/contact", label: "Contact Me", icon: "bi-envelope" },
   ];
@@ -13,7 +14,7 @@ const Sidebar = ({ currentRoute }) => {
   const profileData = {
     logo: "/assets/images/my-profile-img.jpg",
     siteName: "ARGOSTA",
-    siteDescription: "Game Engine Developer",
+    siteDescription: "Software Engineer",
     siteDegree: "M.Sc. Computer Science",
   };
 
@@ -26,7 +27,7 @@ const Sidebar = ({ currentRoute }) => {
 
   return (
     <div className="sidebar">
-      <div className="personal-info">
+      <div className="personal-info-container">
         {profileData.logo && (
           <div className="profile-img">
             <img
@@ -36,12 +37,13 @@ const Sidebar = ({ currentRoute }) => {
             />
           </div>
         )}
-        <h1 className="sitename">{profileData.siteName}</h1>
-        <h3 className="SiteDescription">{profileData.siteDescription}</h3>
-        <p className="degree">{profileData.siteDegree}</p>
+        <div className="personal-info">
+          <h1 className="sitename">{profileData.siteName}<SvgIconCanadaFalg className="flag-mobile" styles={{display:'none'}} /></h1> 
+          <h3 className="SiteDescription">{profileData.siteDescription}</h3>
+          <p className="degree">{profileData.siteDegree}</p>
+          <SvgIconCanadaFalg className="flag" />
+        </div>
 
-        {/* TODO: fix Canada flag not showing */}
-        {/* <p className="flag">{"\uD83C\uDDE8\uD83C\uDDE6"}</p>  */}
       </div>
 
       {/* Navigation Menu */}
