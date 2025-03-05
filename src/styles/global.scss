@@ -1,0 +1,11 @@
+// the only reason for using SCSS is that NextJs does nto respect the CSS import order 
+//and re-orders them in the production build. this messes up some 3rd party style overrides
+
+@import "rsuite/dist/rsuite.min.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@import "custom.css";
+@import "makrdown.css";
+@import "projects.css";
+@import "responsive.css";

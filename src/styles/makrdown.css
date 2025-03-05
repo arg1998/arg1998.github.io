@@ -1,0 +1,129 @@
+.blog-container-md {
+  color: #e0e0e0;
+  /* Light text */
+  font-size: 14pt;
+  text-align: justify;
+}
+
+/* Headings */
+.blog-container-md h1,
+.blog-container-md h2,
+.blog-container-md h3 {
+  color: #ffffff;
+}
+
+/* Blockquotes */
+.blog-container-md blockquote {
+  border-left: 4px solid color-mix(in srgb, var(--accent-color), white 40%);
+  padding-left: 4px;
+  color: #bbb;
+}
+
+/* Tables */
+.blog-container-md table {
+  border-color: #ffffff;
+  border-radius: 1rem;
+}
+
+.blog-container-md th {
+  border: 1px solid;
+  text-align: left !important;
+  padding: 5px 10px;
+  color: #ddd;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+.blog-container-md td {
+  border-color: #ffffff;
+  border: 1px solid;
+  text-align: left !important;
+  padding: 5px 10px;
+}
+
+/* Inline Code */
+.blog-container-md code {
+  color: color-mix(in srgb, var(--accent-color), white 80%);
+}
+
+/* Code Blocks */
+.blog-container-md pre {
+  border-radius: 10px;
+}
+
+/* Task Lists */
+.contains-task-list .task-list-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 2px;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #ffffff86;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+  cursor: default;
+}
+
+
+.contains-task-list .task-list-item input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 7px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+
+.blog-container-md a {
+  color: var(--link-color);
+  text-decoration: underline dotted;
+}
+
+
+blockquote[data-callout] {
+  padding: 10px 16px !important;
+    border: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.callout-title-icon {
+  margin-bottom: 5px;
+}
+
+.callout-title-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+blockquote[data-callout="tip"] {
+  background-color: color-mix(in srgb, orange, transparent 90%);
+}
+
+blockquote[data-callout="tip"] .callout-title-icon {
+  color: rgb(255, 94, 0);
+}
+
+
+blockquote[data-callout="info"] {
+  background-color: color-mix(in srgb, rgb(0, 225, 255), transparent 90%);
+}
+
+blockquote[data-callout="info"] .callout-title-icon {
+  color: rgb(0, 255, 255);
+}
+
+blockquote[data-callout="warning"] {
+  background-color: color-mix(in srgb, rgb(229, 255, 0), transparent 80%);
+}
+
+blockquote[data-callout="warning"] .callout-title-icon {
+  color: rgb(251, 255, 0);
+}
