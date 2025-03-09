@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import Sidebar from "./Sidebar";
-import SEO from "./SEO";
+import Header from "./Header";
 
-const Application = ({ children, currentRoute, pageTitle }) => {
+const Application = ({ children, currentRoute, pageTitle, pagePreviewData = {} }) => {
 
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -41,7 +41,7 @@ const Application = ({ children, currentRoute, pageTitle }) => {
 
   return (
     <>
-      <SEO title={pageTitle ? pageTitle : "ARGOSTA"} />
+      <Header title={pageTitle ? pageTitle : "ARGOSTA"} pagePreviewData={pagePreviewData} />
       {/* <div className="background-image">
         <img src="/assets/images/bg-dark.png" alt="Background" />
       </div> */}
