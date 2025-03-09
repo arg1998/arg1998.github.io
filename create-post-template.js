@@ -85,9 +85,9 @@ const createPostTemplate = () => {
         active: true,
         slug: sanitizedSlug,
         URI: '/blog/' + sanitizedSlug,
-        URL: 'https://argosta.me/blog/' + sanitizedSlug,
+        URL: 'https://wwwargosta.me/blog/' + sanitizedSlug,
         fancyTitle: fancyTitle,
-        imageUri: "/blog/No_Image_Available.jpg",
+        imageUri: "/blog/404.jpg",
         imageAlt: "",
         date: currentDate,
         active: true,
@@ -108,7 +108,7 @@ import BlogMarkdownContent from "../../../components/BlogMarkdownContent";
 //----------------------------- Import Markdown Content Here --------------------------------
 import markdownContent from "./content.md"
 
-const ${pascalCaseSlug} = ({postData}) => {
+const ${pascalCaseSlug} = ({postData, socialPreviewData}) => {
 
   // redirect to 404 if this post is not on display
   if (!postData.active) {
@@ -119,7 +119,7 @@ const ${pascalCaseSlug} = ({postData}) => {
   
 
   return (
-    <Application currentRoute={postData.URI} pageTitle={postData.fancyTitle}>
+    <Application currentRoute={postData.URI} pageTitle={postData.fancyTitle} pagePreviewData={socialPreviewData}>
       <BlogPostVerticalLayout>
         <BlogPostBanner postData={postData} bannerImage={""} />
         <TableOfContents markdownContents={[markdownContent]} showHeader={true} generateReference={true} />
@@ -135,10 +135,18 @@ const ${pascalCaseSlug} = ({postData}) => {
 import POSTS from "../../../data/posts.json";
 export async function getStaticProps() {
   const { ${camelCaseSlug} } = POSTS;
+  const socialPreviewData = {
+    description: ${camelCaseSlug}.excerpt || "",
+    keywords: ${camelCaseSlug}?.tags.join(", ") || "",
+    image: "https://www.argosta.me" + ${camelCaseSlug}.imageUri,
+    url: ${camelCaseSlug}.URL,
+    type: "article"
+  }
 
   return {
     props: {
       postData: ${camelCaseSlug},
+      socialPreviewData
     },
   };
 }
