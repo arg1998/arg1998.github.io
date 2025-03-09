@@ -461,6 +461,9 @@
     font-size: 14pt;
   }
 
+    .ribbon-archive {
+      font-size: 10pt;
+    }
 
   .project-item-buttons {
     position: static;
