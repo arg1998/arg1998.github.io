@@ -93,8 +93,8 @@ const ProjectItem = ({ children, imagePath, title, imageStyles, languages, platf
                         </div>}
 
                         {show_extra_buttons && <div className="project-item-buttons">
-                            {githubUrl && <a className={`project-item-button-github ${readMoreUri ? "" : "github-expanded"}`} href={githubUrl}> <i className="bi bi-github" /><span>Source Code</span></a>}
-                            {readMoreUri && <a className={`project-item-button-read-more ${githubUrl ? "" : "read-more-expanded"}`} href={readMoreUri}>Read More</a>}
+                            {githubUrl && <a target="_blank" className={`project-item-button-github ${readMoreUri ? "" : "github-expanded"}`} href={githubUrl}> <i className="bi bi-github" /><span>Source Code</span></a>}
+                            {readMoreUri && <a target="_blank" className={`project-item-button-read-more ${githubUrl ? "" : "read-more-expanded"}`} href={readMoreUri}>Read More</a>}
 
                             <div className="project-item-corner-arch" />
                         </div>}
