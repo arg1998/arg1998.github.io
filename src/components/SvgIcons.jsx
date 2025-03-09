@@ -495,7 +495,7 @@ const SvgIconCanadaFalg = ({ className, styles }) => (
     </svg>
 )
 
-const SvgIconWeb = ({ className, styles }) => (
+const SvgIconWeb = ({ color, className, styles }) => (
     <svg
         className={className}
         style={styles}
