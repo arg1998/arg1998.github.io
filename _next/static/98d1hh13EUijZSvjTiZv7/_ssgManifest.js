@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002Fblog\u002Fnextjs-on-github-pages","\u002Fblog\u002Furl-preview-test"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
