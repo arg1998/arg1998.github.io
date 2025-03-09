@@ -6,11 +6,16 @@ const RibbonWorEducational = ({ styles }) => {
     return (<div className="ribbon ribbon-educational" style={styles}> <i className="bi bi-mortarboard-fill" /> <span>Study</span> </div>)
 }
 
+const RibbonWorArchive = ({ styles }) => {
+    return (<div className="ribbon ribbon-archive" style={styles}> <i className="bi bi-archive-fill" /> <span>Archived</span> </div>)
+}
+
 
 
 
 
 export {
     RibbonWorInProgress,
-    RibbonWorEducational
+    RibbonWorEducational,
+    RibbonWorArchive,
 }
