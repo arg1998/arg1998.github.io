@@ -8,6 +8,6 @@ Find me at:
 
 - <i class="bi bi-envelope-at-fill"></i> Email me at: `argosta` `[at]` `proton.me` _(My preferred method of communication)_
 - <i class="bi bi-linkedin"></i><a href="https://linkedin.com/in/arg1998" target="_blank"> Linkedin</a> _(Send a note along with the connection request! otherwise I might reject)_ 
-- <i class="bi bi-twitter"></i><a href="https://linkedin.com/in/arg1998" target="_blank"> Twitter</a> _(Not very active here, just have it to have it!)_
+- <i class="bi bi-twitter"></i><a href="https://x.com/argostapala" target="_blank"> Twitter</a> _(Not very active here, just have it to have it!)_
 
 </span>
