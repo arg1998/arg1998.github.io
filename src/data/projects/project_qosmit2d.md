@@ -4,7 +4,7 @@
 
 - **<span style="color: color-mix(in srgb, var(--primary-color), white 60%);">ECS</span>** : to handle game objects (entities) within the game and their behavior (components) through centralized logic blocks (systems)
 - **<span style="color: color-mix(in srgb, var(--primary-color), white 60%);">Resource Manager</span>** : for loading and managing assets (images, sprites, audio files, etc) and scenes
-- **<span style="color: color-mix(in srgb, var(--primary-color), white 60%);">Scene Manager</span>** : to hold and manage assets and logic for different scenes
+- **<span style="color: color-mix(in srgb, var(--primary-color), white 60%);">Input System</span>** : to process mouse and keyboard events and map them into Commands
 - **<span style="color: color-mix(in srgb, var(--primary-color), white 60%);">Audio Player</span>** : to play music and sound effects
 - **<span style="color: color-mix(in srgb, var(--primary-color), white 60%);">Collision Physics</span>** : to handle collision for simple 2D objects
 - **<span style="color: color-mix(in srgb, var(--primary-color), white 60%);">Animation</span>** : to drive simple transform and sprite animations

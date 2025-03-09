@@ -1,0 +1,5 @@
+# Rice Seed Classifier
+
+For my Computer Vision Engineer Internship at _Rice Research Institute of Iran (RRII)_, I worked on automating rice seed classification and defect detection. The goal was to identify different local rice varieties and spot broken or defective grains faster and more accurately than human experts. Using deep learning and computer vision, I trained CNN models that achieved 87.1% accuracy in variety classification and 97.6% accuracy in defect detection while making the process 120x faster. I used OpenCV with the Canny algorithm to automatically isolate and crop individual rice grains, then built a dataset of over 1 million labeled images. The models were trained and deployed with TensorFlow and Keras on an Ubuntu environment.
+
+A big part of this project was dataset creation and automating the process of finding and cropping single rice grains while filtering out empty slots and broken seeds. The full dataset and source code are still confidential, but I’ve shared a simplified version for educational purposes.
