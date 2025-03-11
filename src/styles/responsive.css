@@ -461,9 +461,9 @@
     font-size: 14pt;
   }
 
-    .ribbon-archive {
-      font-size: 10pt;
-    }
+  .ribbon-archive {
+    font-size: 10pt;
+  }
 
   .project-item-buttons {
     position: static;
@@ -484,4 +484,23 @@
   .project-item-corner-arch {
     display: none !important;
   }
+
+  .resume-section-container {
+    padding-left: 0px;
+  }
+
+  .resume-entry-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .col-end {
+    align-items: flex-start;
+  }
+
+    .resume-certificate-container{
+      flex-direction: column;
+    }
+
+
 }

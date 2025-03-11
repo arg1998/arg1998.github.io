@@ -1,0 +1,102 @@
+.resume-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    gap: 10px;
+    font-family: Raleway, var(--default-font) !important;
+}
+
+.resume-section-container {
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resume-section-title {
+    color: color-mix(in srgb, var(--primary-color), white 10%);
+    font-weight: bold;
+}
+
+.resume-sub-section-container {
+    padding-left: 20px;
+}
+
+.resume-sub-section-title {
+    color: #ebebeb;
+}
+
+.resume-entry-header {
+    width: 100%;
+    display: flex;
+    padding: 5px 0px;
+    padding-left: 10px;
+    border-radius: 4px;
+    border-left: 6px solid color-mix(in srgb, var(--background-primary-color), white 20%);
+}
+
+.education-entry-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.col-start {
+    justify-content: start;
+}
+
+.col-end {
+    align-items: flex-end;
+}
+
+.resume-entry-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: #ebebeb;
+
+}
+
+.resume-entry-subtitle {
+    font-size: 12pt;
+    color: #b4b4b4;
+}
+
+.resume-entry-date {
+    font-size: 12pt;
+    color: #b4b4b4;
+    font-family: sans-serif, var(--default-font);
+}
+
+
+.experience-entry-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.experience-entry-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.experience-entry-content .blog-container-md {
+    font-size: 12pt;
+    color: #c2c2c2;
+}
+
+.resume-certificate-container {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
