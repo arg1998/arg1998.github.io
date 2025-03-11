@@ -62,9 +62,14 @@ const Blog = () => {
     postDataFiltered.sort((a, b) => a.date - b.date);
   }
 
-    
+  const homePagePreviewData = {
+    description: "Software Engineer | M.Sc. Computer Science",
+    image: "https://www.argosta.me/assets/images/link_preview_img_1.jpeg",
+    url: "https://www.argosta.me/blog"
+  }
+
   return (
-    <Application currentRoute={"/blog"} pageTitle={"ARGOSTA → Blog"}>
+    <Application currentRoute={"/blog"} pageTitle={"ARGOSTA → Blog"} pagePreviewData={homePagePreviewData}>
       <FilterBar
         onFilterBarUpdate={onFilterbarQueryChanegd}
         TagSource={PostsTagSource}

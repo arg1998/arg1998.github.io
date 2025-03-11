@@ -1,6 +1,4 @@
 import Application from "../components/Application";
-import { HorizontalLayout, VerticalLayout } from "../components/Layouts"
-import MarkdownContent from "../components/BlogMarkdownContent";
 import Tooltip from "../components/Tooltip"
 import {
   SvgIconAndroid,
@@ -52,8 +50,14 @@ import {
 const Home = () => {
 
   const svgIconColor = "#bbb"
+  const homePagePreviewData = {
+    description: "Software Engineer | M.Sc. Computer Science",
+    image: "https://www.argosta.me/assets/images/link_preview_img_1.jpeg",
+    url: "https://www.argosta.me/"
+  }
+
   return (
-    <Application currentRoute={"/"} pageTitle={"ARGOSTA → Home"}>
+    <Application currentRoute={"/"} pageTitle={"ARGOSTA → Home"} pagePreviewData={homePagePreviewData} >
       <div style={{ width: '100%', paddingTop: 60, color: '#fff' }}>
 
         <div className="home-page-content-header" >
