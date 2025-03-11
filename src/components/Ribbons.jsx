@@ -2,11 +2,11 @@ const RibbonWorInProgress = ({styles}) =>  {
     return (<div className="ribbon ribbon-wip" style={styles}> <i className="bi bi-cone-striped" /><span> W.I.P </span></div>)
 }
 
-const RibbonWorEducational = ({ styles }) => {
-    return (<div className="ribbon ribbon-educational" style={styles}> <i className="bi bi-mortarboard-fill" /> <span>Study</span> </div>)
+const RibbonDemo = ({ styles }) => {
+    return (<div className="ribbon ribbon-educational" style={styles}> <i className="bi bi-circle-half" /> <span>Demo</span> </div>)
 }
 
-const RibbonWorArchive = ({ styles }) => {
+const RibbonArchive = ({ styles }) => {
     return (<div className="ribbon ribbon-archive" style={styles}> <i className="bi bi-archive-fill" /> <span>Archived</span> </div>)
 }
 
@@ -16,6 +16,6 @@ const RibbonWorArchive = ({ styles }) => {
 
 export {
     RibbonWorInProgress,
-    RibbonWorEducational,
-    RibbonWorArchive,
+    RibbonDemo,
+    RibbonArchive,
 }
