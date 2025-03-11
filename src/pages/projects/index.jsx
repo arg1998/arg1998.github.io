@@ -2,10 +2,7 @@ import Application from "../../components/Application";
 import MarkDownContent from "../../components/BlogMarkdownContent"
 import ProjectItem from "../../components/ProjectItem"
 import { SvgIconAndroid, SvgIconApple, SvgIconArduino, SvgIconLinux, SvgIconWeb, SvgIconWindows } from "../../components/SvgIcons"
-import { RibbonWorArchive, RibbonWorEducational, RibbonWorInProgress } from "../../components/Ribbons";
-
-
-
+import { RibbonWorInProgress, RibbonDemo, RibbonArchive } from "../../components/Ribbons";
 
 
 
@@ -16,23 +13,35 @@ import light_knight_markdown from "../../data/projects/project_light_knight.md"
 import rice_seed_markdown from "../../data/projects/project_rice_seed.md"
 import humidistat_markdown from "../../data/projects/project_humidistat.md"
 import argosta_markdown from "../../data/projects/project_argosta.md"
+import fear_of_god_markdown from '../../data/projects/project_fear_of_god.md';
+import gp_markdown from "../../data/projects/project_gp.md"
+import optimal_triangulation_markdown from "../../data/projects/project_optimal_triangulation.md"
 
 
 const Projects = () => {
+
+  const homePagePreviewData = {
+    description: "Software Engineer | M.Sc. Computer Science",
+    image: "https://www.argosta.me/assets/images/link_preview_img_1.jpeg",
+    url: "https://www.argosta.me/proejcts"
+  }
+
   return (
     <Application
       currentRoute={"/projects"}
       pageTitle={"ARGOSTA → Projects"}
+      pagePreviewData={homePagePreviewData}
     >
 
 
       <div className={"project-area-container"}>
+        {/* eZeGo */}
         <ProjectItem
           ribbonComponent={<RibbonWorInProgress />}
           ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(255, 102, 0)", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/ezego"}
           imagePath={"ezego.jpg"}
-          imageStyles={{ objectPosition: "0% 93%", aspectRatio: 16 / 6 }}
+          imageStyles={{ objectPosition: "0% 93%", aspectRatio: 16 / 4 }}
           languages={["C++ 17", "Python",]}
           topics={["Visualization", "Cross-platform", "Real-time", "GUI", "FOSS"]}
           tools={["Dear ImGui", "Tracy Profiler", "CMake", "Boost", "RtMIDI"]}
@@ -54,9 +63,9 @@ const Projects = () => {
 
         </ProjectItem>
 
-
+        {/* Qosmit2D */}
         <ProjectItem
-          ribbonComponent={<RibbonWorEducational />}
+          ribbonComponent={<RibbonDemo />}
           ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(0, 217, 255)", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/qosmit2d"}
           imagePath={"qosmit2d.png"}
@@ -82,6 +91,7 @@ const Projects = () => {
 
         </ProjectItem>
 
+        {/* SVG Styler */}
         <ProjectItem
           githubUrl={"https://github.com/arg1998/obsidian-svg-styler"}
           imagePath={"svg-styler.png"}
@@ -107,8 +117,9 @@ const Projects = () => {
 
         </ProjectItem>
 
+        {/* LightKnight */}
         <ProjectItem
-          ribbonComponent={<RibbonWorArchive />}
+          ribbonComponent={<RibbonArchive />}
           ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "#fbff00", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/LightKnight"}
           imagePath={"lightknight.png"}
@@ -135,7 +146,7 @@ const Projects = () => {
 
         </ProjectItem>
 
-
+        {/* Rice Seeds */}
         <ProjectItem
           githubUrl={"https://github.com/arg1998/RiceSeedDetector"}
           imagePath={"rice_seeds.jpg"}
@@ -154,7 +165,35 @@ const Projects = () => {
 
         </ProjectItem>
 
+        {/* Fear of God */}
         <ProjectItem
+          ribbonComponent={<RibbonDemo />}
+          ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(238, 255, 0)", border: '2px solid' }}
+          githubUrl={"https://github.com/arg1998/FearOfGod"}
+          imagePath={"fear_of_god.jpg"}
+          imageStyles={{ objectPosition: "0% 0%", aspectRatio: 16 / 6 }}
+          topics={["UI", "Animation", "Design", "Fashion", "Online Shopping"]}
+          tools={["Flutter", "VS Code", "Flutter Dev Tools"]}
+          languages={["Dart"]}
+          platforms={[
+            {
+              component: SvgIconAndroid,
+              tooltip: "Android"
+            },
+            {
+              component: SvgIconApple,
+              tooltip: "iOS"
+            }
+          ]}
+        >
+          <MarkDownContent MarkdownFileContent={fear_of_god_markdown} styles={{ textAlign: 'start', fontSize: '13pt' }} />
+
+        </ProjectItem>
+
+        {/* HumidiStat */}
+        <ProjectItem
+          ribbonComponent={<RibbonDemo />}
+          ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(238, 255, 0)", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/HumidiStat"}
           imagePath={"humidistat.jpg"}
           imageStyles={{ objectPosition: "0% 0%", aspectRatio: 16 / 6 }}
@@ -172,7 +211,64 @@ const Projects = () => {
 
         </ProjectItem>
 
+        {/* Genetic Programming */}
+        <ProjectItem
+          ribbonComponent={<RibbonArchive />}
+          ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(249, 252, 78)", border: '2px solid' }}
+          githubUrl={"https://github.com/arg1998/GeneticProgramming"}
+          imagePath={"gp.jpg"}
+          imageStyles={{ objectPosition: "0% 0%", aspectRatio: 16 / 6 }}
+          topics={["Genetic Programming", "Optimization", "Algorithms", "Solvers", "Heuristic"]}
+          tools={["GraphViz", "VS Code", "Jupyter"]}
+          languages={["Python"]}
+          platforms={[
+            {
+              component: SvgIconLinux,
+              tooltip: "Linux"
+            },
+            {
+              component: SvgIconWindows,
+              tooltip: "Windows"
+            }, {
+              component: SvgIconApple,
+              tooltip: "macOS"
+            }
+          ]}
+        >
+          <MarkDownContent MarkdownFileContent={gp_markdown} styles={{ textAlign: 'start', fontSize: '13pt' }} />
 
+        </ProjectItem>
+
+        {/* DP Triangulation */}
+        <ProjectItem
+          ribbonComponent={<RibbonArchive />}
+          ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(249, 252, 78)", border: '2px solid' }}
+          githubUrl={"https://github.com/arg1998/GeneticProgramming"}
+          imagePath={"optimal_dp.jpg"}
+          imageStyles={{ objectPosition: "0% 0%", aspectRatio: 16 / 6 }}
+          topics={["Dynamic Programming", "Geometry", "Tesselation", "Optimization"]}
+          tools={["p5", "JetBrains IDEA"]}
+          languages={["Java"]}
+          platforms={[
+            {
+              component: SvgIconLinux,
+              tooltip: "Linux"
+            },
+            {
+              component: SvgIconWindows,
+              tooltip: "Windows"
+            }, {
+              component: SvgIconApple,
+              tooltip: "macOS"
+            }
+          ]}
+        >
+          <MarkDownContent MarkdownFileContent={optimal_triangulation_markdown} styles={{ textAlign: 'start', fontSize: '13pt' }} />
+
+        </ProjectItem>
+
+
+        {/* Argosta.me */}
         <ProjectItem
           githubUrl={"https://github.com/arg1998/arg1998.github.io"}
           readMoreUri={"/blog/nextjs-on-github-pages"}
@@ -191,7 +287,6 @@ const Projects = () => {
           <MarkDownContent MarkdownFileContent={argosta_markdown} styles={{ textAlign: 'start', fontSize: '13pt' }} />
 
         </ProjectItem>
-
 
       </div>
 
