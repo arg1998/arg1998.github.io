@@ -911,6 +911,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  margin-bottom: 60px;
   width: 100%;
   color: white;
 }
@@ -1048,7 +1049,7 @@ body {
 }
 
 
-.toc-disbaled-links a {
+.toc-disabled-links a {
   pointer-events: none;
   cursor: default;
 }

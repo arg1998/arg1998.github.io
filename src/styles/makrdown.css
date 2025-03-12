@@ -43,6 +43,9 @@
 /* Inline Code */
 .blog-container-md code {
   color: color-mix(in srgb, var(--accent-color), white 80%);
+  background-color: color-mix(in srgb, var(--background-primary-color), white 15%);
+  padding: 2px 5px;
+  border-radius: 5px;
 }
 
 /* Code Blocks */
@@ -126,4 +129,8 @@ blockquote[data-callout="warning"] {
 
 blockquote[data-callout="warning"] .callout-title-icon {
   color: rgb(251, 255, 0);
+}
+
+.heading-number {
+  font-family: sans-serif;
 }
