@@ -2,7 +2,7 @@ import { generateTocMarkdown } from "../utils/generateTocMarkdown"
 
 
 
-const TabelOfContents = ({ markdownContents = null, showHeader, styles, generateReference = true }) => {
+const TableOfContents = ({ markdownContents = null, showHeader, styles, generateReference = true}) => {
     if (markdownContents == null || !markdownContents.length) return null;
 
     
@@ -13,7 +13,7 @@ const TabelOfContents = ({ markdownContents = null, showHeader, styles, generate
             <>
                 {showHeader && <h1>Contents</h1>}
                 <div
-                    className={`blog-post-toc-container ${!generateReference && "toc-disbaled-links"}`}
+                    className={`blog-post-toc-container ${!generateReference && "toc-disabled-links"}`}
                     dangerouslySetInnerHTML={{ __html: toc }}
                     style={styles}
                 />
@@ -23,7 +23,7 @@ const TabelOfContents = ({ markdownContents = null, showHeader, styles, generate
     return null;
 }
 
-export default TabelOfContents;
+export default TableOfContents;
 
 
 

@@ -8,10 +8,19 @@ import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug"
 import rehypeKatex from "rehype-katex";
 
+
 import "katex/dist/katex.min.css";
 import "highlight.js/styles/lioshi.css";
 
-const BlogMarkdownContent = ({ MarkdownFileContent, styles }) => {
+// ----------------------------- End Custom Plugins ---------------------------------
+
+
+
+const MarkdownContent = ({ MarkdownFileContent, styles, numberedHeadings = false }) => {
+
+  if (numberedHeadings) {
+    remarkPlugins.push(remarkNumberedHeadings);
+  }
   return (
     <div className="blog-container-md" style={styles}>
       <ReactMarkdown
@@ -25,4 +34,4 @@ const BlogMarkdownContent = ({ MarkdownFileContent, styles }) => {
 };
 
 
-export default BlogMarkdownContent;
+export default MarkdownContent;

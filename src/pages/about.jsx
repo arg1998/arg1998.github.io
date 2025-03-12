@@ -1,5 +1,5 @@
 import Application from "../components/Application";
-import MarkdownContent from "../components/BlogMarkdownContent"
+import MarkdownContent from "../components/MarkdownContent"
 
 import aboutme_markdown from "../data/aboutme/aboutme.md"
 

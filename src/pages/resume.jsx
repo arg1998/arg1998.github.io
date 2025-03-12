@@ -1,5 +1,5 @@
 import Application from "../components/Application";
-import MarkdownContent from "../components/BlogMarkdownContent"
+import MarkdownContent from "../components/MarkdownContent"
 
 const grad_ra_job = `
 - **Designed and developed a full-stack web application** from scratch for data collection targeting software developers in North America and Europe, ensuring adherence to PIPEDA and CPPA regulations

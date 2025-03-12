@@ -1,5 +1,5 @@
 import Application from "../../components/Application";
-import MarkDownContent from "../../components/BlogMarkdownContent"
+import MarkDownContent from "../../components/MarkdownContent"
 import ProjectItem from "../../components/ProjectItem"
 import { SvgIconAndroid, SvgIconApple, SvgIconArduino, SvgIconLinux, SvgIconWeb, SvgIconWindows } from "../../components/SvgIcons"
 import { RibbonWorInProgress, RibbonDemo, RibbonArchive } from "../../components/Ribbons";
