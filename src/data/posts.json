@@ -8,7 +8,7 @@
     "imageUri": "/blog/nextjs-on-github-pages/banner.jpg",
     "imageAlt": "",
     "date": 1741202783616,
-    "excerpt": "",
+    "excerpt": "Here, you can read about the process, decisions, tools, and struggles I encountered while building my own personal website from scratch using NextJs and GitHub Pages.",
     "tags": [
       "web_dev",
       "nextjs",

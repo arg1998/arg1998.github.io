@@ -100,13 +100,13 @@ const createPostTemplate = () => {
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Application from "../../../components/Application";
-import BlogPostVerticalLayout from "../../../components/BlogPostVertcalLayout"
+import BlogPostVerticalLayout from "../../../components/BlogPostVerticalLayout"
 import BlogPostBanner from "../../../components/BlogPostBanner";
 import TableOfContents from "../../../components/TableOfContents";
-import BlogMarkdownContent from "../../../components/BlogMarkdownContent";
+import MarkdownContent from "../../../components/MarkdownContent";
 
 //----------------------------- Import Markdown Content Here --------------------------------
-import markdownContent from "./content.md"
+import markdown_content from "./content.md"
 
 const ${pascalCaseSlug} = ({postData, socialPreviewData}) => {
 
@@ -122,9 +122,9 @@ const ${pascalCaseSlug} = ({postData, socialPreviewData}) => {
     <Application currentRoute={postData.URI} pageTitle={postData.fancyTitle} pagePreviewData={socialPreviewData}>
       <BlogPostVerticalLayout>
         <BlogPostBanner postData={postData} bannerImage={""} />
-        <TableOfContents markdownContents={[markdownContent]} showHeader={true} generateReference={true} />
+        <TableOfContents markdownContents={[markdown_content]} showHeader={true} generateReference={true} />
 
-        <BlogMarkdownContent MarkdownFileContent={markdownContent} />
+        <MarkdownContent MarkdownFileContent={markdown_content} />
 
       </BlogPostVerticalLayout>
     </Application>
