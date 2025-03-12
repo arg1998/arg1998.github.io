@@ -2,10 +2,10 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Application from "../../../components/Application";
-import BlogPostVerticalLayout from "../../../components/BlogPostVertcalLayout"
+import BlogPostVerticalLayout from "../../../components/BlogPostVerticalLayout"
 import BlogPostBanner from "../../../components/BlogPostBanner";
 import TableOfContents from "../../../components/TableOfContents";
-import BlogMarkdownContent from "../../../components/BlogMarkdownContent";
+import MarkdownContent from "../../../components/MarkdownContent";
 
 //----------------------------- Import Markdown Content Here --------------------------------
 import markdownContent from "./content.md"
@@ -24,9 +24,9 @@ const NextjsOnGithubPages = ({ postData, socialPreviewData }) => {
     <Application currentRoute={postData.URI} pageTitle={postData.fancyTitle} pagePreviewData={socialPreviewData}>
       <BlogPostVerticalLayout>
         <BlogPostBanner postData={postData} bannerImage={"banner.jpg"} />
-        <TableOfContents markdownContents={[markdownContent]} showHeader={true} generateReference={true} />
+        <TableOfContents markdownContents={[markdownContent]} showHeader={true} generateReference={true}/>
 
-        <BlogMarkdownContent MarkdownFileContent={markdownContent} />
+        <MarkdownContent MarkdownFileContent={markdownContent}/>
 
       </BlogPostVerticalLayout>
     </Application>
