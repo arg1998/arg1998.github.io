@@ -1,3 +1,6 @@
+// TODO: Add a share button to make projectReadableId sharable by copying the link into clipboard 
+
+
 import Application from "../../components/Application";
 import MarkDownContent from "../../components/MarkdownContent"
 import ProjectItem from "../../components/ProjectItem"
@@ -5,7 +8,7 @@ import { SvgIconAndroid, SvgIconApple, SvgIconArduino, SvgIconLinux, SvgIconWeb,
 import { RibbonWorInProgress, RibbonDemo, RibbonArchive } from "../../components/Ribbons";
 
 
-
+import kitchen_chaos_markdown from "../../data/projects/project_kitchen_chaos.md"
 import ezego_markdown from "../../data/projects/project_ezego.md"
 import qosmit2d_markdown from "../../data/projects/project_qosmit2d.md"
 import svg_styler_markdown from "../../data/projects/project_svg_styler.md"
@@ -16,6 +19,7 @@ import argosta_markdown from "../../data/projects/project_argosta.md"
 import fear_of_god_markdown from '../../data/projects/project_fear_of_god.md';
 import gp_markdown from "../../data/projects/project_gp.md"
 import optimal_triangulation_markdown from "../../data/projects/project_optimal_triangulation.md"
+import YouTubeFrame from "../../components/YouTubeFrame";
 
 
 const Projects = () => {
@@ -35,8 +39,38 @@ const Projects = () => {
 
 
       <div className={"project-area-container"}>
+        {/* Kitchen Chaos*/}
+        <ProjectItem
+          projectReadableId={"unity-kitchen-chaos-game"}
+          ribbonComponent={<RibbonDemo />}
+          ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(0, 217, 255)", border: '2px solid' }}
+          imageStyles={{ objectPosition: "0ّ% 100%", aspectRatio: 1920 / 720 }}
+          extrasContainerStyles={{ justifyContent: 'start', gap: 25 }}
+          imagePath={"kitchen_chaos_clone.jpg"}
+          languages={["C#"]}
+          topics={["Game Development", "Casual Game", "Video Game"]}
+          tools={["Unity 6", "Visual Studio"]}
+          platforms={[
+            {
+              component: SvgIconWindows,
+              tooltip: "Windows"
+            }
+            , {
+              component: SvgIconLinux,
+              tooltip: "Linux"
+            }, {
+              component: SvgIconApple,
+              tooltip: "macOS"
+            }
+          ]}
+        >
+          <MarkDownContent MarkdownFileContent={kitchen_chaos_markdown} styles={{ fontSize: '13pt' }} />
+          <YouTubeFrame embedUrl={"https://www.youtube.com/embed/lJOwZZJ0s3Q?si=6thjVGEEcbsqlY-1"} />
+        </ProjectItem>
+
         {/* eZeGo */}
         <ProjectItem
+          projectReadableId={"ezego"}
           ribbonComponent={<RibbonWorInProgress />}
           ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(255, 102, 0)", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/ezego"}
@@ -65,9 +99,11 @@ const Projects = () => {
 
         {/* Qosmit2D */}
         <ProjectItem
+          projectReadableId={"qosmit-2d-game-engine"}
           ribbonComponent={<RibbonDemo />}
           ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(0, 217, 255)", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/qosmit2d"}
+          extrasContainerStyles={{ justifyContent: 'space-around' }}
           imagePath={"qosmit2d.png"}
           imageStyles={{ objectPosition: "0% 0%", aspectRatio: 16 / 6 }}
           topics={["Game Engine", "ECS", "2D", "Real-time", "Cross-platform"]}
@@ -93,6 +129,7 @@ const Projects = () => {
 
         {/* SVG Styler */}
         <ProjectItem
+          projectReadableId={"obsidian-svg-styler"}
           githubUrl={"https://github.com/arg1998/obsidian-svg-styler"}
           imagePath={"svg-styler.png"}
           imageStyles={{ objectPosition: "0% 0%", aspectRatio: 16 / 6 }}
@@ -119,13 +156,14 @@ const Projects = () => {
 
         {/* LightKnight */}
         <ProjectItem
+          projectReadableId={"lightknight-visualizer"}
           ribbonComponent={<RibbonArchive />}
           ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "#fbff00", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/LightKnight"}
           imagePath={"lightknight.png"}
           imageStyles={{ objectPosition: "0% 0%", aspectRatio: 16 / 6 }}
           topics={["Stage Lighting", "Visualization", "Music", "Cross-platform", "Real-time"]}
-          tools={["ElectronJs", "Qt", "Arduino", "ReactJs", "Redux", "WaveSurfer", "TinyColor", "d3"]}
+          tools={["ElectronJs", "Qt", "NodeJs", "Arduino", "ReactJs", "Redux", "d3"]}
           languages={["JavaScript", "C/C++", "HTML", "CSS"]}
           platforms={[
             {
@@ -148,6 +186,7 @@ const Projects = () => {
 
         {/* Rice Seeds */}
         <ProjectItem
+          projectReadableId={"rice-seed-classifier-opencv-cnn"}
           githubUrl={"https://github.com/arg1998/RiceSeedDetector"}
           imagePath={"rice_seeds.jpg"}
           imageStyles={{ objectPosition: "0% 0%", aspectRatio: 16 / 6 }}
@@ -167,6 +206,7 @@ const Projects = () => {
 
         {/* Fear of God */}
         <ProjectItem
+          projectReadableId={"flutter-fear-of-god-app"}
           ribbonComponent={<RibbonDemo />}
           ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(238, 255, 0)", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/FearOfGod"}
@@ -192,6 +232,7 @@ const Projects = () => {
 
         {/* HumidiStat */}
         <ProjectItem
+          projectReadableId={"react-native-iot-humidity-app"}
           ribbonComponent={<RibbonDemo />}
           ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(238, 255, 0)", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/HumidiStat"}
@@ -213,6 +254,7 @@ const Projects = () => {
 
         {/* Genetic Programming */}
         <ProjectItem
+          projectReadableId={"tree-based-genetic-programming"}
           ribbonComponent={<RibbonArchive />}
           ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(249, 252, 78)", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/GeneticProgramming"}
@@ -241,6 +283,7 @@ const Projects = () => {
 
         {/* DP Triangulation */}
         <ProjectItem
+          projectReadableId={"optimal-triangulation-dynamic-programming"}
           ribbonComponent={<RibbonArchive />}
           ribbonStyles={{ backgroundColor: "#2a2a2a88", color: "rgb(249, 252, 78)", border: '2px solid' }}
           githubUrl={"https://github.com/arg1998/GeneticProgramming"}
@@ -270,6 +313,7 @@ const Projects = () => {
 
         {/* Argosta.me */}
         <ProjectItem
+          projectReadableId={"nextjs-github-pages-portfolio"}
           githubUrl={"https://github.com/arg1998/arg1998.github.io"}
           readMoreUri={"/blog/nextjs-on-github-pages"}
           imagePath={"argosta.jpg"}
