@@ -1,6 +1,6 @@
 import Tooltip from "./Tooltip"
 
-const ProjectItem = ({ children, imagePath, title, imageStyles, languages, platforms, tools, topics, ribbonComponent, ribbonStyles, githubUrl, readMoreUri }) => {
+const ProjectItem = ({ children, projectReadableId, imagePath, title, imageStyles, extrasContainerStyles, languages, platforms, tools, topics, ribbonComponent, ribbonStyles, githubUrl, readMoreUri }) => {
 
     const show_extras = (languages != null && languages.length > 0) ||
         (platforms != null && platforms.length > 0) ||
@@ -18,7 +18,7 @@ const ProjectItem = ({ children, imagePath, title, imageStyles, languages, platf
 
     return (
         <>
-            <div className="project-grid-item" style={{ borderBottomRightRadius: show_extra_buttons ? 0 : 15, marginBottom: show_extra_buttons? 120: 25 }}>
+            <div id={projectReadableId} className="project-grid-item" style={{ borderBottomRightRadius: show_extra_buttons ? 0 : 15, marginBottom: show_extra_buttons? 120: 25 }}>
                 <div className="project-grid-item-image-container">
                     {imagePath && <>
                         <img className="project-grid-item-image"
@@ -37,7 +37,7 @@ const ProjectItem = ({ children, imagePath, title, imageStyles, languages, platf
                         {children}
                     </div>
                     <div className="project-grid-item-content-extras-container">
-                        {show_extras && <div className="project-grid-item-content-extras">
+                        {show_extras && <div className="project-grid-item-content-extras" style={extrasContainerStyles}>
 
                             {topics &&
                                 <div className="project-extra-topics-container project-extra-entry">
