@@ -13,6 +13,7 @@ const Header = ({ title, pagePreviewData}) => {
       <meta name="keywords" content={keywords || ""} />
 
       {/* telegram, linkedin, facebook, etc. preview */}
+      <meta property="og:site_name" content="Argosta.me"></meta>
       {title && <meta property="og:title" content={title} />}
       {description && <meta property="og:description" content={description} />}
       {url && <meta property="og:url" content={url} />}
