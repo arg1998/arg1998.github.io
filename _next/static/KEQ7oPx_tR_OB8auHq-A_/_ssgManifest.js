@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fblog\u002Fnextjs-on-github-pages","\u002Fblog\u002Fstateful-cpp-part-1"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
