@@ -6,7 +6,8 @@ const BlogPostBanner = ({ postData,
     bannerImage = '',
     bannerImageMaxHeight = null,
     bannerImagePosition = { x: 0.5, y: 0.5 },
-    drawBttomseparator = false
+    bannerImageStyles = {},
+    drawBottomSeparator = false
 }) => {
     return (
         <div id="blog-post-banner-container">
@@ -43,13 +44,14 @@ const BlogPostBanner = ({ postData,
                     alt={postData.fancyTitle}
                     style={{
                         maxHeight: bannerImageMaxHeight ? bannerImageMaxHeight : null,
-                        objectPosition: `${bannerImagePosition.x * 100}% ${bannerImagePosition.y * 100}%`
+                        objectPosition: `${bannerImagePosition.x * 100}% ${bannerImagePosition.y * 100}%`,
+                        ...bannerImageStyles
                     }}
                 />
             }
 
-            {/* Horzontal Separator */}
-            {drawBttomseparator && <hr />}
+            {/* Horizontal Separator */}
+            {drawBottomSeparator && <hr />}
         </div>
     )
 
