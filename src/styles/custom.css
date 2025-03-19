@@ -1269,3 +1269,23 @@ body {
 .page-not-found > h1 {
   font-size: 56pt;
 }
+
+
+
+
+.video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+.ytp-pause-overlay, .ytp-pause-overlay-container {
+  display: none !important;
+}
