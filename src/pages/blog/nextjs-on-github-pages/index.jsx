@@ -38,8 +38,8 @@ import POSTS from "../../../data/posts.json";
 export async function getStaticProps() {
   const { nextjsOnGithubPages } = POSTS;
   const socialPreviewData = {
-    description: nextjsOnGithubPages.excerpt && "",
-    keywords: nextjsOnGithubPages?.tags.join(", ") && "",
+    description: nextjsOnGithubPages.excerpt || "",
+    keywords: nextjsOnGithubPages?.tags.join(", ") || "",
     image: "https://www.argosta.me" + nextjsOnGithubPages.imageUri,
     url: nextjsOnGithubPages.URL,
     type: "article"

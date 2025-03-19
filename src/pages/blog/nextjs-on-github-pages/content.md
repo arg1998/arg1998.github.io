@@ -19,7 +19,7 @@ Since I am not keeping any data from users, that means my website can be a simpl
 - My website must not use any cookies, trackers, ads, and other forms of privacy violation tools
 - My website must not use third-party services for dynamic content like blog posts
 
-Now, you may think some of these requirement sound absurd! and you are right. But what I want to achieve is a balance among my **SKILLS**, **SIMPLICITY**, and **FREEDOM**! My skills in programming and web development are more than enough for me to build simple solution and have total control and freedom over it. A huge part of this simplicity comes from the fact that my website can be static. And by static, I mean no server-side computation or rendering. Just a bunch of HTML, CSS, Js, and asset files send to the user. 
+Now, you may think some of these requirement sound absurd! and you are right. But what I want to achieve is a balance among my **SKILLS**, **SIMPLICITY**, and **FREEDOM**! My skills in programming and web development are more than enough for me to build a simple solution and have total control and freedom over it. A huge part of this simplicity comes from the fact that my website can be static. And by static, I mean no server-side computation or rendering. Just a bunch of HTML, CSS, Js, and asset files sent to the user. 
 
 There are, of course, many other smaller requirements (both functional and non-functional) that I won't go into detail. However, you can spot some of them in later chapters. 
 
@@ -185,7 +185,7 @@ Creating a blog post or article manually is time consuming and error prone. That
 With this script, I can create a new blog post in under 10 seconds with all the necessary infrastructure and everything gets updated automatically because of the way I have set up my simple and small JSON database. 
 
 #### _Markdown Rendering_
-To actually write content for an article or a blog post, I needed a way to display rich content where elements such as headers, lists, tables, mathematical expressions, code syntax highlighting, etc are easy to write and display. Markdown is a great tool for this. Specifically, `react-markdown` package is the one I chose. `react-markdown` uses `remark` and `rehype` and their multitude of plugins to render markdown as html. I used bellow plugins to extend the functionality of `react-markdown` and achieve my desired outcome: 
+To actually write content for an article or a blog post, I needed a way to display rich content where elements such as headers, lists, tables, mathematical expressions, code syntax highlighting, etc are easy to write and display. Markdown is a great tool for this. Specifically, `react-markdown` package is the one I chose. `react-markdown` uses `remark` and `rehype` and their multitude of plugins to render markdown as HTML. I used bellow plugins to extend the functionality of `react-markdown` and achieve my desired outcome: 
 
 - `react-markdown` – Renders Markdown as React components.  
 - `remark-math` – Parses LaTeX math equations in Markdown.  
@@ -205,7 +205,7 @@ import article_markdown_content from "./article.md"
 ```
 
 #### _Custom Rendering_
-Markdown rendering is great but it is just another component. It is possible to render very interesting things in an article (or anywhere in the website honestly) like interactive charts, simple games, HTML frames, videos, etc. For custom component that require a log of data to be fetched (imagine an interactive data visualizer), we can prompt the user if they want to load the necessary data and only upon user's permission, we LAZY load the data, do the computation, cache the result and display it. 
+Markdown rendering is great but it is just another component. It is possible to render very interesting things in an article (or anywhere in the website honestly) like interactive charts, simple games, HTML frames, videos, etc. For custom component that require a lot of data to be fetched (imagine an interactive data visualizer), we can prompt the user if they want to load the necessary data and only upon user's permission, we LAZY load the data, do the computation, cache the result and display it. 
 
 
 
