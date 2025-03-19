@@ -58,7 +58,8 @@ const publications = `
 `
 
 const tools_and_libs = `
-<a href="https://unity.com/" target="_blank">\`Unity 6\`</a>, 
+<a href="https://unity.com/" target="_blank">\`Unity 6\`</a>,
+<a href="https://unrealengine.com/" target="_blank">\`Unreal Engine 5\`</a>,
 <a href="https://cmake.org/" target="_blank">\`CMake\`</a>, 
 <a href="https://git-scm.com/" target="_blank">\`Git\`</a>, 
 <a href="https://www.openssh.com/" target="_blank">\`SSH\`</a>, 
