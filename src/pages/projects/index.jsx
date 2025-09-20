@@ -6,12 +6,14 @@ import MarkDownContent from "../../components/MarkdownContent"
 import ProjectItem from "../../components/ProjectItem"
 import { SvgIconAndroid, SvgIconApple, SvgIconArduino, SvgIconLinux, SvgIconWeb, SvgIconWindows } from "../../components/SvgIcons"
 import { RibbonWorInProgress, RibbonDemo, RibbonArchive } from "../../components/Ribbons";
+import YouTubeFrame from "../../components/YouTubeFrame";
 
 
 import kitchen_chaos_markdown from "../../data/projects/project_kitchen_chaos.md"
 import ezego_markdown from "../../data/projects/project_ezego.md"
 import qosmit2d_markdown from "../../data/projects/project_qosmit2d.md"
 import svg_styler_markdown from "../../data/projects/project_svg_styler.md"
+import bc_accident_markdown from "../../data/projects/project_bc_accident.md"
 import light_knight_markdown from "../../data/projects/project_light_knight.md"
 import rice_seed_markdown from "../../data/projects/project_rice_seed.md"
 import humidistat_markdown from "../../data/projects/project_humidistat.md"
@@ -19,7 +21,7 @@ import argosta_markdown from "../../data/projects/project_argosta.md"
 import fear_of_god_markdown from '../../data/projects/project_fear_of_god.md';
 import gp_markdown from "../../data/projects/project_gp.md"
 import optimal_triangulation_markdown from "../../data/projects/project_optimal_triangulation.md"
-import YouTubeFrame from "../../components/YouTubeFrame";
+
 
 
 const Projects = () => {
@@ -153,6 +155,29 @@ const Projects = () => {
           <MarkDownContent MarkdownFileContent={svg_styler_markdown} styles={{ textAlign: 'start', fontSize: '13pt' }} />
 
         </ProjectItem>
+
+        {/* BC Accident Visualizer */}
+        <ProjectItem
+          projectReadableId={"bc-accident-vis"}
+          githubUrl={"https://github.com/arg1998/TrafficAccidentVis"}
+          imagePath={"bc_accident.jpg"}
+          imageStyles={{ objectPosition: "0% 0%", aspectRatio: 16 / 6 }}
+          topics={["Data Visualization", "Geo Data", "Interactive", "Traffic Data", "Data Processing"]}
+          tools={["Leaflet", "GeoJson", "Google Charts", "FastAPI", "Panads", "GeoPandas", "ShapeFiles", "uvicorn"]}
+          languages={["Python","JavaScript", "HTML", "CSS"]}
+          platforms={[
+            {
+              component: SvgIconWeb,
+              tooltip: "Web Application"
+            }
+
+          ]}
+        >
+          <MarkDownContent MarkdownFileContent={bc_accident_markdown} styles={{ textAlign: 'start', fontSize: '13pt' }} />
+          <video src="https://github.com/arg1998/TrafficAccidentVis/raw/refs/heads/main/Data/demo.mp4" muted controls width={"100%"} />
+
+        </ProjectItem>
+
 
         {/* LightKnight */}
         <ProjectItem

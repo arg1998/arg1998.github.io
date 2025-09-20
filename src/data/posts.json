@@ -16,7 +16,7 @@
     ]
   },
   "statefulCppPart1": {
-    "active": true,
+    "active": false,
     "slug": "stateful-cpp-part-1",
     "URI": "/blog/stateful-cpp-part-1",
     "URL": "https://wwwargosta.me/blog/stateful-cpp-part-1",
@@ -25,6 +25,8 @@
     "imageAlt": "",
     "date": 1742341758908,
     "excerpt": "In the first part of this \"Stateful C++\" series, we implement a basic state management system in C++ capable of Undo/Redo behaviors that is efficient and easy to use, and extendable. We also explore other methods of state management ",
-    "tags": []
+    "tags": [
+      "cpp"
+    ]
   }
 }

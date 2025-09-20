@@ -1,0 +1,4 @@
+# Traffic Accidents Visualizer
+
+Traffic Accidents Visualizer is an interactive web application that helps users explore traffic accident data in British Columbia by municipality, year, and contributing factors. By combining dynamic maps and rich Sankey diagrams, this tool offers an intuitive and visual way to understand how accident causes vary across locations and time.
+The application is powered by a `FastAPI` backend that reads and processes publicly available traffic accident datasets on demand. The frontend is built using `jQuery`, `Google Charts`, and `Leaflet.js` to deliver a responsive and interactive user experience. For geographic visualization, we overlaid municipality boundaries onto the Leaflet map using custom `GeoJSON` and `shapefiles` of British Columbia. These files were processed and cleaned using `GeoPandas`, including a projection conversion from `EPSG:3857` (Pseudo-Mercator) to `EPSG:4326` to ensure proper alignment with web map standards

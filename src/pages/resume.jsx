@@ -1,13 +1,19 @@
 import Application from "../components/Application";
 import MarkdownContent from "../components/MarkdownContent"
 
-const grad_ra_job = `
-- **Designed and developed a full-stack web application** from scratch for data collection targeting software developers in North America and Europe, ensuring adherence to PIPEDA and CPPA regulations
 
-  - **Front-end:** Created a **novel** vignette-based survey instrument with authentication, feedback, and screening systems
-  - **Back-end:** Deployed API and database services using Docker containers on Ubuntu
-  - Screened and **recruited 56** (out of 300) professional developers and **managed** their compensation
-  - **Technologies:** \`MySQL, Docker, Node.js, PM2, React.js, Python, Express.js, TypeORM, Axios, JWT\`
+const data_engineer_h3l_job = `
+
+`;
+
+const grad_ra_job = `
+- **Designed and developed a full-stack web application** from scratch for data collection targeting software developers in North America and Europe, ensuring adherence to Government of Canada's PIPEDA law for data privacy
+
+  - Built a React/Redux based Single Page Application (SPA) with protected routes (JWT authentication)
+  - Deployed a Node.js/Express.js/MySQL API server using Docker and PM2, **ensuring 100% server uptime**
+  - **Achieved 10x increase in user traffic and collected data** by integrating SurveyMonkey and Prolific APIs
+  - Screened and **recruited 56** professional open-source developers and **managed** their compensation
+  - **Technologies:** \`MySQL\`, \`Docker\`, \`Node.js\`, \`PM2\`, \`React.js\`, \`Python\`, \`Express.js\`, \`TypeORM\`, \`Axios\`, \`JWT\`
 
 </br>
 
@@ -37,24 +43,42 @@ const uib_internship = `
   - Employed **data-driven**, **cache-aware**, and **multi-threaded design**
   - Wrote an AMPL **language parser** for testing solutions and benchmarking
   - Built a **real-time** telemetry system to monitor the application's runtime via a webpage
-  - **Technologies:** \`C++17, CMake, GTest, GDB, STL, Perf, SSH, Ubuntu, Node.js, p5.js, Socket.IO, HTML, AMPL\`
+  - **Technologies:** \`C++17\`, \`CMake\`, \`GTest\`, \`GDB\`, \`STL\`, \`Perf\`, \`SSH\`, \`Ubuntu\`, \`Node.js\`, \`d3.js\`, \`Socket.IO\`, \`HTML\`
 `
 
 const rrii_internship = `
-- Developed Computer Vision pipelines to classify local rice varieties with **87.1% accuracy**. Trained Deep CNNs to detect broken or corrupt rice seeds with **97.6% accuracy**. Reduced classification time by **120x compared to human baseline**
+- Developed highly configurable Computer Vision and Image processing pipelines using Python for agricultural research projects and automating tasks previously carried out by humans.
 
-  - Used **OpenCV** with the **Canny** algorithm to automate seed isolation and cropping
-  - Curated a labeled dataset of **1M+** rice seed images with variety and quality metadata
-  - Utilized **TensorFlow** to train, test, and deploy **Deep CNNs** + **Softmax** classifiers
-  - **Technologies:** \`Python, OpenCV, TensorFlow, Keras, Jupyter Notebooks, Ubuntu\`
+  -	Trained deep CNNs to classify rice variety with 87.1% and detect corrupt seeds with 97.6% accuracy
+  -	Improved classification speed by 120x and data annotation throughput by 400x compared to human baseline
+  -	Used OpenCV to assemble a labeled dataset of more than 1 million rice seed images with metadata
+  -	Developed a web application for data annotation and verification using FastAPI and React.js
+  -	Technologies: \`Python\`, \`OpenCV\`, \`TensorFlow\`, \`Keras\`, \`FastAPI\`, \`React.js\`, \`Ubuntu\`
+
 `;
 
 const freelance_job = `
-- Developed full-stack web and Android applications using **Node.js**, **React.js & React Native**, **Flutter**, **MySQL**, and **Electron.js**.
+Built applications usings React.js, Node.js, React Native, Redux, Flutter, and MySQL for clients and projects. 
 `
+
+// const freelance_job = `
+//   - **2018** (12 months): Full-stack developer at <a href="https://pindo.ir" target="_blank">Pindo.ir</a>, an online marketplace and advertising startup for buying and selling new and used products across the country.
+//     - Collaborated with a team of engineers, designers, and PMs during a major business up-scaling phase
+//     - Assisted in PostgreSQL schema design, database migration, and Node.js REST API refactoring
+//     - Improved UI/UX for charts and map views in dashboards across the website
+//     - Refactored 50+ responsive React components to match new design guidelines
+//     - Technologies: \`Node.js\`, \`React.js\`, \`Leaflet\`, \`d3.js\`, \`PostgreSQL\`, \`PM2\`, \`GitLab\`
+//   - **2019** (8 months): Android developer at Mahta, an education institution focused on women in biological sciences. I was tasked with creating an Android application and integrating it with the existing PHP/Laravel API server.
+//     - Developed multi-role support for students, parents, and teachers within a single application
+//     - Built shared study and class calendars with real-time push notifications
+//     - Implemented private and group chat functionalities using websockets
+//     - Technologies: \`React Native\`, \`Realm\`, \`Expo\`, \`Android Studio\`, \`VS Code\`
+
+// `
 
 const publications = `
 - **A. Ghorbani** *et al.* (2023): <a href="https://doi.org/10.1109/ICSE48619.2023.00123" target="_blank">“Exploring Developer Preferences for GitHub Bots”</a> in IEEE/ACM 45<sup>th</sup> **ICSE**, Melbourne, Australia.
+- **[Thesis] A. Ghorbani** (2023): <a href="https://dspace.library.uvic.ca/items/81f69d2e-4f09-4f51-8cd4-66e1ade247a6" target="_blank">“Balancing Autonomy and Persona…”</a> In M.Sc. Computer Science, University of Victoria, Canada
 `
 
 const tools_and_libs = `
@@ -73,6 +97,8 @@ const tools_and_libs = `
 <a href="https://github.com/ocornut/imgui" target="_blank">\`Dear ImGui\`</a>,
 <a href="https://www.raylib.com/" target="_blank">\`Raylib\`</a>,
 <a href="https://www.sfml-dev.org/" target="_blank">\`SFML\`</a>,
+<a href="https://leafletjs.com/" target="_blank">\`Leaflet.js\`</a>,
+<a href="https://d3js.org/" target="_blank">\`d3.js\`</a>,
 <a href="https://p5js.org/" target="_blank">\`p5.js\`</a>,
 <a href="https://www.qt.io/" target="_blank">\`Qt\`</a>, 
 <a href="https://www.mysql.com/" target="_blank">\`MySQL\`</a>, 
@@ -84,9 +110,10 @@ const tools_and_libs = `
 <a href="https://nextjs.org/" target="_blank">\`NextJs\`</a>,
 <a href="https://react.dev/" target="_blank">\`ReactJs\`</a>,
 <a href="https://reactnative.dev/" target="_blank">\`React Native\`</a>, 
+<a href="https://flutter.dev/" target="_blank">\`Flutter\`</a>,
+<a href="https://expo.dev/" target="_blank">\`Expo\`</a>,
 <a href="https://expressjs.com/" target="_blank">\`ExpressJs\`</a>,
 <a href="https://fastapi.tiangolo.com/" target="_blank">\`FastAPI\`</a>,
-<a href="https://flutter.dev/" target="_blank">\`Flutter\`</a>,
 <a href="https://docs.flutter.dev/tools/devtools" target="_blank">\`Flutter Dev Tools\`</a>,
 <a href="https://www.electronjs.org/" target="_blank">\`ElectronJs\`</a>, 
 <a href="https://www.microsoft.com/en-us/windows" target="_blank">\`Windows\`</a>, 
@@ -104,7 +131,6 @@ const tools_and_libs = `
 <a href="https://scikit-learn.org/" target="_blank">\`Scikit-learn\`</a>,
 <a href="https://requests.readthedocs.io/" target="_blank">\`Requests\`</a>,
 <a href="https://beautiful-soup-4.readthedocs.io/" target="_blank">\`BeautifulSoup\`</a>
-<a href="https://d3js.org/" target="_blank">\`D3.js\`</a>,
 <a href="https://jquery.com/" target="_blank">\`jQuery\`</a>,
 <a href="https://redux.js.org/" target="_blank">\`Redux\`</a>,
 <a href="https://mongoosejs.com/" target="_blank">\`Mongoose\`</a>,
@@ -197,7 +223,7 @@ const Resume = () => {
 
         <ResumeSection title={<><i className="bi bi-tools"></i> Skills</>} id="skills">
           <ResumeSubSection title={"Languages : "}>
-            <MarkdownContent MarkdownFileContent={`\`C++\`, \`C#\`, \`Python\`, \`R\`, \`SQL\`, \`JavaScript\`, \`Dart\`, \`C\`, \`Java\`, \`Assembly\`, \`LaTeX\``} />
+            <MarkdownContent MarkdownFileContent={`\`C++\`, \`C#\`, \`Python\`, \`R\`, \`SQL\`, \`JavaScript\`, \`TypeScript\` \`Dart\`, \`C\`, \`Java\`, \`Assembly\`, \`LaTeX\``} />
           </ResumeSubSection>
 
           <ResumeSubSection title={"Tools, Frameworks, and Libraries: "}>
@@ -207,7 +233,12 @@ const Resume = () => {
         </ResumeSection>
 
         <ResumeSection title={<><i className="bi bi-journal-code"></i> Experiences</>} id="experiences">
-          <ExperienceEntry title={"Graduate Research Assistant"} location={"Octeral lab, UVic, Victoria, BC, Canada"} date={"Sep 2021 - Sep 2023"}>
+
+          <ExperienceEntry title={"Jr Data Engineer"} location={"Horizon 3 AI Lab @ Unilever, Toronto, ON, Canada"} date={"May 2025 - present"}>
+            <MarkdownContent MarkdownFileContent={data_engineer_h3l_job} />
+          </ExperienceEntry>
+
+          <ExperienceEntry title={"Graduate Research Assistant"} location={"Octera Lab, University of Victoria, Victoria, BC, Canada"} date={"Sep 2021 - Sep 2023"}>
             <MarkdownContent MarkdownFileContent={grad_ra_job} />
           </ExperienceEntry>
 
@@ -223,7 +254,7 @@ const Resume = () => {
             <MarkdownContent MarkdownFileContent={rrii_internship} />
           </ExperienceEntry>
 
-          <ExperienceEntry title={"Full-stack Software Developer (Freelance)"} location={"Rasht, Gilan, Iran"} date={"Mar 2017 -- Apr 2020"}>
+          <ExperienceEntry title={"Full-stack Software Developer (Freelance)"} location={"Rasht, Gilan, Iran"} date={"Mar 2018 -- Apr 2020"}>
             <MarkdownContent MarkdownFileContent={freelance_job} />
           </ExperienceEntry>
         </ResumeSection>
@@ -240,6 +271,7 @@ const Resume = () => {
           <CertificateEntry title={"Improving Deep Neural Networks"} issuer={" Coursera — DeepLearning.ai"} />
           <CertificateEntry title={"Neural Networks and Deep Learning"} issuer={" Coursera — DeepLearning.ai"} />
           <CertificateEntry title={"Heuristic Algorithms Workshop "} issuer={"University of Tehran"} />
+          <CertificateEntry title={"Android Programming "} issuer={"University of Tehran"} />
 
         </ResumeSection>
       </div>
